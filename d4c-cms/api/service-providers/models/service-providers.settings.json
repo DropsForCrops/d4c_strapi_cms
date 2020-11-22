@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "serviceProviders",
+  "info": {
+    "name": "ServiceProviders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "contactFullName": {
+      "type": "string"
+    },
+    "contactEmail": {
+      "type": "email"
+    },
+    "website": {
+      "type": "string"
+    },
+    "contactPhone": {
+      "type": "string"
+    },
+    "taxNumber": {
+      "type": "string"
+    },
+    "tradeLicense": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "brandName": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "notConfirmed",
+        "suspended",
+        "blocked"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "Country": {
+      "type": "string"
+    },
+    "streetNr": {
+      "type": "string"
+    },
+    "accountEmail": {
+      "type": "email"
+    },
+    "customerEmail": {
+      "type": "email"
+    },
+    "categories": {
+      "collection": "categories"
+    }
+  }
+}
