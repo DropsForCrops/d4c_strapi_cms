@@ -6,9 +6,9 @@ module.exports = {
     if (ctx.is('multipart')) {
       const { data, files } = parseMultipartData(ctx);
 debugger
-      entity = await strapi.services.service-providers.create(data, { files });
+      entity = await strapi.services['service-providers'].create(data, { files });
     } else {
-      entity = await strapi.services.service-providers.create(ctx.request.body);
+      entity = await strapi.services['service-providers'].create(ctx.request.body);
     }
 
     entry = sanitizeEntity(entity, { model: strapi.models.comment });
@@ -35,11 +35,11 @@ debugger
   async find(ctx) {
     let entities;
     if (ctx.query._q) {
-      entities = await strapi.services.service-providers.search(ctx.query);
+      entities = await strapi.services['service-providers'].search(ctx.query);
     } else {
-      entities = await strapi.services.service-providers.find(ctx.query);
+      entities = await strapi.services['service-providers'].find(ctx.query);
     }
 
-    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.service-providers }));
+    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models['service-providers'] }));
   },
 };
