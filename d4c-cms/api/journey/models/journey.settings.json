@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "journeys",
+  "info": {
+    "name": "Journeys",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "UserUid": {
+      "type": "string"
+    },
+    "CoEditorUid": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "name": "Bookings"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "UserUid": {
+      "type": "string"
+    },
+    "ServideUid": {
+      "type": "string"
+    },
+    "BookingDateTime": {
+      "type": "datetime"
+    }
+  }
+}

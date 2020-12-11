@@ -1,0 +1,18 @@
+module.exports = {
+  apps: [
+    {
+      name: 'd4c-cms',
+      cwd: '/home/ubuntu/d4c_strapi_cms/d4c-cms',
+      script: 'npm',
+      args: 'start',
+      env: {
+        NODE_ENV: 'production',
+        DATABASE_HOST: 'd4c.ckayt2ufowsn.eu-central-1.rds.amazonaws.com', // database Endpoint under 'Connectivity & Security' tab
+        DATABASE_PORT: '5432',
+        DATABASE_NAME: 'postgres', // DB name under 'Configuration' tab
+        DATABASE_USERNAME: 'dropsforcrops', // default username
+        DATABASE_PASSWORD: 'dropsforcrops',
+      },
+    },
+  ],
+};

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Services",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "servicesubcategory": {
+      "collection": "subcategories"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Rating": {
+      "type": "decimal"
+    },
+    "TimesTaken": {
+      "type": "integer"
+    }
+  }
+}

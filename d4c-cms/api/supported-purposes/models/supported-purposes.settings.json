@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supported_purposes",
+  "info": {
+    "name": "SupportedPurposes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Donation": {
+      "type": "decimal"
+    }
+  }
+}
